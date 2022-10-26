@@ -1,14 +1,80 @@
 body {
-  height: 5000px;
+
 }
-.left {
+
+
+/*Navigation*/
+#navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0px 5%;
+  border-bottom: 10px solid blue;
+  border-color: rgba(0,174,239,0.5);
+}
+#navigation {
+  display: flex;
   width: 50%;
-  background-color: purple;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.right {
-  width: 50%;
-  background-color: green;
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
 }
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  background-color: rgba(0,174,239,0.5);
+  border-radius: 125px;
+
+}
+
+/* mainContent flexbox */
+#mainContent {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 200px 200px 200px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "sidebar heroSection heroSection heroSection"
+  "sidebar skills exp exp"
+  "sidebar skills exp exp"
+  ;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background-color: rgba(0,174,239,0.5);
+  border: 5px solid blue;
+}
+#heroSection {
+  grid-area: heroSection;
+  background-image: url("../img/heroimg.png");
+  object-fit: contain;
+}
+#skills {
+  grid-area: skills;
+  background-color: rgba(0,174,239,0.5);
+  border: 5px solid red;
+}
+#exp {
+  grid-area: exp;
+  background-color: rgba(0,174,239,0.5);
+}
+
+
+
+
 .relative {
   background-color: lightblue;
   height: 250px;
