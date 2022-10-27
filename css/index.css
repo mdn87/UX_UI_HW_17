@@ -3,21 +3,28 @@ body {
 }
 
 
-/*Navigation*/
+/* Navigation */
 #navBar {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  margin: 0px 5%;
+  margin: 0px;
   border-bottom: 10px solid blue;
-  border-color: rgba(0,174,239,0.5);
+  border-color: rgba(0,174,239,1);
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 #navigation {
   display: flex;
   width: 50%;
   align-items: center;
   justify-content: space-evenly;
+}
+#logo {
+  border-bottom: 20px solid blue;
+  border-color: rgba(0,174,239,1);
 }
 #navigation p {
   cursor: pointer;
@@ -41,10 +48,10 @@ body {
 
 /* mainContent flexbox */
 #mainContent {
-  margin: 0px 5%;
+  margin: 0px 1%;
   display: grid;
-  grid-template-rows: 300px 200px 200px 200px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 520px 200px 200px 200px;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
   grid-template-areas:
   "sidebar heroSection heroSection heroSection"
   "sidebar skills exp exp"
@@ -54,27 +61,93 @@ body {
 
 #sidebar {
   grid-area: sidebar;
-  background-color: rgba(0,174,239,0.5);
-  border: 5px solid blue;
+
 }
 #heroSection {
   grid-area: heroSection;
   background-image: url("../img/heroimg.png");
-  object-fit: contain;
+  object-fit: fill;
+  background-repeat: no-repeat;
 }
 #skills {
   grid-area: skills;
-  background-color: rgba(0,174,239,0.5);
-  border: 5px solid red;
 }
 #exp {
   grid-area: exp;
-  background-color: rgba(0,174,239,0.5);
 }
 
+/* Sidebar */
+.leftNav {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  color: rgba(0,174,239,1);
+  text-transform: uppercase;
+  text-align: center;
+  position: sticky;
+  top: 600;
+  background-color: white;
+}
+.leftNavList {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.leftNavList li {
+  padding: 10px;
+}
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid rgba(0,174,239,1);
+  border-width: 3px; 
+  display: inline-block;
+}
 
+/* Content Sections */
+.textStyles {
+  /*
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
+  */
+}
+.textStyles h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: rgba(0,174,239,1);
+  text-transform: uppercase;
+}
+.textStyles h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+  color: rgba(109,109,109,1);
+  text-transform: uppercase;
+}
+.textStyles h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 12pt;
+  font-weight: 200;
+  color: rgba(0,174,239,1);
+  text-transform: none;
+}
+.textStyles p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(109,109,109,1);
+  text-transform: none;
+}
+.line {
+  border-bottom: 2px solid rgba(0,174,239,1);
+  width: 100%;
+}
 
-
+/* Junk */
 .relative {
   background-color: lightblue;
   height: 250px;
