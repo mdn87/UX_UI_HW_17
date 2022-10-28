@@ -72,7 +72,7 @@ body {
 }
 #heroSection {
   grid-area: heroSection;
-  background-image: url("../img/heroimg.png");
+  background-image: url("img/heroimg.png");
   object-fit: fill;
   background-repeat: no-repeat;
 }
