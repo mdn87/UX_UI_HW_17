@@ -2,7 +2,6 @@ body {
 
 }
 
-
 /* Navigation */
 #navBar {
   display: flex;
@@ -10,10 +9,11 @@ body {
   align-items: center;
   width: 100%;
   margin: 0px;
+  padding-left: 5%;
   border-bottom: 10px solid blue;
   border-color: rgba(0,174,239,1);
   position: sticky;
-  top: 0;
+  top: 0px;
   background-color: white;
 }
 #navigation {
@@ -23,8 +23,7 @@ body {
   justify-content: space-evenly;
 }
 #logo {
-  border-bottom: 20px solid blue;
-  border-color: rgba(0,174,239,1);
+
 }
 #navigation p {
   cursor: pointer;
@@ -33,8 +32,11 @@ body {
 .icons {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  width: 25%;
+  padding-left: 30%;
+}
+.icons img {
+  width: 50px;
+  height: 50px;
 }
 .icons img {
   margin: 15px;
@@ -42,10 +44,15 @@ body {
 }
 .highlight {
   background-color: rgba(0,174,239,0.5);
-  border-radius: 125px;
-
+  border-radius: 50%;
 }
 
+#sidebar2 {
+  position: sticky;
+  top: 250px;
+  width: 250px;
+  
+}
 /* mainContent flexbox */
 #mainContent {
   margin: 0px 1%;
@@ -71,9 +78,11 @@ body {
 }
 #skills {
   grid-area: skills;
+  padding-right: 25px;
 }
 #exp {
   grid-area: exp;
+  padding-right: 25px;
 }
 
 /* Sidebar */
@@ -84,9 +93,12 @@ body {
   color: rgba(0,174,239,1);
   text-transform: uppercase;
   text-align: center;
-  position: sticky;
-  top: 600;
+  position: fixed;
+  top: 245px;
+  width: 15%;
+  left: 1%;
   background-color: white;
+  z-index: -1;
 }
 .leftNavList {
   list-style: none;
@@ -145,6 +157,12 @@ body {
 .line {
   border-bottom: 2px solid rgba(0,174,239,1);
   width: 100%;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  bottom: -500px;
 }
 
 /* Junk */
