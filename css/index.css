@@ -163,6 +163,7 @@ body {
 .footer {
   position: relative;
   bottom: -500px;
+  color: rgba(0,174,239,0)
 }
 
 /* Junk */
